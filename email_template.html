@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSO Heat Transfer Solutions — Newsletter</title>
+    <style>
+        /* Email-safe reset */
+        body,
+        table,
+        td,
+        div,
+        p,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            background-color: #0a0a0f;
+        }
+
+        img {
+            border: 0;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            max-width: 100%;
+        }
+
+        .email-wrapper {
+            width: 100%;
+            background-color: #0a0a0f;
+            padding: 40px 0;
+        }
+
+        .email-body {
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 48px 32px;
+            background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .logo-text {
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: 8px;
+            color: #c8a864;
+            margin-bottom: 8px;
+        }
+
+        .header-subtitle {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #8899aa;
+            margin-bottom: 4px;
+        }
+
+        .header-tagline {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #556677;
+            margin-top: 16px;
+        }
+
+        .gold-divider {
+            width: 60px;
+            height: 2px;
+            background: #c8a864;
+            margin: 20px auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            background: #111118;
+            padding: 36px 32px;
+            border-left: 1px solid rgba(200, 168, 100, 0.08);
+            border-right: 1px solid rgba(200, 168, 100, 0.08);
+        }
+
+        .section-label {
+            font-size: 9px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #c8a864;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f0ece4;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .body-text {
+            font-size: 14px;
+            color: #99aabc;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Product Cards in Email */
+        .product-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .email-product {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(200, 168, 100, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .email-product h4 {
+            font-size: 13px;
+            font-weight: 700;
+            color: #f0ece4;
+            margin-bottom: 6px;
+        }
+
+        .email-product p {
+            font-size: 11px;
+            color: #778899;
+            line-height: 1.5;
+        }
+
+        /* Stats Strip */
+        .stats-strip {
+            display: flex;
+            background: #0d0d18;
+            border-top: 1px solid rgba(200, 168, 100, 0.1);
+            border-bottom: 1px solid rgba(200, 168, 100, 0.1);
+            border-left: 1px solid rgba(200, 168, 100, 0.08);
+            border-right: 1px solid rgba(200, 168, 100, 0.08);
+        }
+
+        .strip-stat {
+            flex: 1;
+            text-align: center;
+            padding: 20px 10px;
+            border-right: 1px solid rgba(200, 168, 100, 0.08);
+        }
+
+        .strip-stat:last-child {
+            border-right: none;
+        }
+
+        .strip-val {
+            font-size: 24px;
+            font-weight: 800;
+            color: #c8a864;
+            margin-bottom: 2px;
+        }
+
+        .strip-lbl {
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #556677;
+        }
+
+        /* Why DSO Icons */
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 14px;
+            background: rgba(200, 168, 100, 0.04);
+            border-radius: 10px;
+        }
+
+        .why-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .why-item h5 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #f0ece4;
+            margin-bottom: 2px;
+        }
+
+        .why-item p {
+            font-size: 10px;
+            color: #778899;
+            line-height: 1.4;
+        }
+
+        /* CTA Button */
+        .cta-wrapper {
+            text-align: center;
+            padding: 36px 32px;
+            background: linear-gradient(135deg, #0f0f1a, #111827);
+            border-left: 1px solid rgba(200, 168, 100, 0.08);
+            border-right: 1px solid rgba(200, 168, 100, 0.08);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, #c8a864, #b8943d);
+            color: #0a0a0a;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            padding: 12px 32px;
+            border: 1px solid rgba(200, 168, 100, 0.3);
+            color: #c8a864;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-left: 8px;
+        }
+
+        /* Footer */
+        .email-footer {
+            text-align: center;
+            padding: 28px 32px;
+            background: #080810;
+            border-radius: 0 0 16px 16px;
+            font-size: 10px;
+            color: #445566;
+            line-height: 1.8;
+            border: 1px solid rgba(200, 168, 100, 0.05);
+            border-top: 1px solid rgba(200, 168, 100, 0.1);
+        }
+
+        .email-footer a {
+            color: #c8a864;
+            text-decoration: none;
+        }
+
+        /* Contact Block */
+        .contact-highlight {
+            background: rgba(200, 168, 100, 0.06);
+            border: 1px solid rgba(200, 168, 100, 0.15);
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .contact-highlight .name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e8d5a0;
+            margin-bottom: 2px;
+        }
+
+        .contact-highlight .role {
+            font-size: 11px;
+            color: #8899aa;
+            margin-bottom: 12px;
+        }
+
+        .contact-highlight .info {
+            font-size: 11px;
+            color: #99aabc;
+            line-height: 1.8;
+        }
+
+        .contact-highlight .info a {
+            color: #c8a864;
+            text-decoration: none;
+        }
+
+        @media (max-width: 620px) {
+            .product-row {
+                flex-direction: column;
+            }
+
+            .stats-strip {
+                flex-wrap: wrap;
+            }
+
+            .strip-stat {
+                min-width: 50%;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-wrapper">
+        <div class="email-body">
+
+            <!-- EMAIL HEADER -->
+            <div class="header">
+                <div class="logo-text">DSO</div>
+                <div class="header-subtitle">Transfer & Bonding Material Division</div>
+                <div class="gold-divider"></div>
+                <div class="header-tagline">Premium Heat Transfer Solutions · Established 1994 · Seoul, Korea</div>
+            </div>
+
+            <!-- INTRO -->
+            <div class="content-section">
+                <div class="section-label">Introduction</div>
+                <div class="section-title">Elevate Your Products with World-Class Heat Transfer Materials</div>
+                <p class="body-text">
+                    DSO (Daesang ST) is a global leader in transfer and bonding material manufacturing, serving 100+
+                    clients worldwide since 1994. From premium fashion labels to industrial applications, our materials
+                    power the world's most innovative brands.
+                </p>
+            </div>
+
+            <!-- STATS -->
+            <div class="stats-strip">
+                <div class="strip-stat">
+                    <div class="strip-val">30+</div>
+                    <div class="strip-lbl">Years</div>
+                </div>
+                <div class="strip-stat">
+                    <div class="strip-val">100+</div>
+                    <div class="strip-lbl">Clients</div>
+                </div>
+                <div class="strip-stat">
+                    <div class="strip-val">50+</div>
+                    <div class="strip-lbl">Products</div>
+                </div>
+                <div class="strip-stat">
+                    <div class="strip-val">5</div>
+                    <div class="strip-lbl">Countries</div>
+                </div>
+            </div>
+
+            <!-- PRODUCTS -->
+            <div class="content-section">
+                <div class="section-label">Our Products</div>
+                <div class="section-title">Complete Range of Transfer Materials</div>
+                <div class="product-row">
+                    <div class="email-product">
+                        <h4>🔥 Heat Transfer Film</h4>
+                        <p>PU · PVC · Glitter · Flock · Chameleon · Reflective · Two-Tone</p>
+                    </div>
+                    <div class="email-product">
+                        <h4>💎 Hotfix Tape</h4>
+                        <p>Rhinestone & crystal transfer adhesives for luxury decoration</p>
+                    </div>
+                </div>
+                <div class="product-row">
+                    <div class="email-product">
+                        <h4>🏭 Hotmelt Film</h4>
+                        <p>Industrial bonding adhesives for textiles & composites</p>
+                    </div>
+                    <div class="email-product">
+                        <h4>🔧 Masking Film</h4>
+                        <p>Precision masking & insulation tapes for manufacturing</p>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top:24px;">
+                    <a href="htv_product_detail.html"
+                        style="display:inline-block; padding:12px 28px; background:linear-gradient(135deg, #c8a864, #b8943d); color:#0a0a0a; font-size:12px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; border-radius:8px; margin:0 6px 8px;">Explore
+                        HTV Products →</a>
+                    <a href="hotfix_product_detail.html"
+                        style="display:inline-block; padding:12px 28px; border:1px solid rgba(200,168,100,0.3); color:#c8a864; font-size:12px; font-weight:600; letter-spacing:1px; text-decoration:none; border-radius:8px; margin:0 6px 8px;">Explore
+                        Hotfix Films →</a>
+                </div>
+            </div>
+
+            <!-- WHY DSO -->
+            <div class="content-section" style="background:#0d0d18;">
+                <div class="section-label">Why Choose DSO</div>
+                <div class="section-title">Your Competitive Advantage</div>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon">🔬</div>
+                        <div>
+                            <h5>R&D Excellence</h5>
+                            <p>Seoul research center with cutting-edge adhesive technology</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">⚙️</div>
+                        <div>
+                            <h5>Manufacturing Mastery</h5>
+                            <p>30+ years of precision coating & processing expertise</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">🌏</div>
+                        <div>
+                            <h5>Global Operations</h5>
+                            <p>Korea, China, Vietnam, USA & Europe presence</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">📦</div>
+                        <div>
+                            <h5>VMI Service</h5>
+                            <p>Smart inventory management with automated replenishment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-wrapper">
+                <div class="section-title" style="margin-bottom:8px;">Let's Discuss Your Next Project</div>
+                <p class="body-text" style="margin-bottom:24px;">Whether you need samples, a custom quote, or want to
+                    explore our VMI services — we're here to help.</p>
+                <div class="contact-highlight">
+                    <div class="name">Albert Kim</div>
+                    <div class="role">Senior Vice President · Transfer & Bonding Material Division</div>
+                    <div class="info">
+                        📧 <a href="mailto:albert@daesangst.com">albert@daesangst.com</a> &nbsp;·&nbsp;
+                        📞 +82-2-2631-4475
+                    </div>
+                </div>
+                <a href="https://www.dso-co.com/eng/sub_customer/inquiry.php" class="cta-button" target="_blank">Request
+                    Quote</a>
+                <a href="https://www.dso-co.com/eng/main/" class="cta-secondary" target="_blank">Visit Website →</a>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="email-footer">
+                DSO Co., Ltd. · 1182, Cheonho-daero, Gangdong-gu, Seoul, Republic of Korea<br>
+                <a href="https://www.dso-co.com/eng/main/">www.dso-co.com</a> &nbsp;·&nbsp; <a
+                    href="http://www.daesangst.com">www.daesangst.com</a><br><br>
+                © 2026 DSO Co., Ltd. All Rights Reserved.<br>
+                <a href="#">Unsubscribe</a> · <a href="#">View in Browser</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
