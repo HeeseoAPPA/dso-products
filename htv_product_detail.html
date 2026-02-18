@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSO — Heat Transfer Vinyl (HTV) Product Catalogue</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --gold: #c8a864;
@@ -12,12 +15,18 @@
             --gold-dark: #a6893e;
             --dark: #0a0a0f;
             --dark-card: #111118;
-            --border: rgba(200,168,100,0.12);
+            --border: rgba(200, 168, 100, 0.12);
             --text-primary: #f0ece4;
             --text-secondary: #8899aa;
             --text-muted: #556677;
         }
-        * { margin:0; padding:0; box-sizing:border-box; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--dark);
@@ -33,33 +42,56 @@
             background: linear-gradient(135deg, #0a0e17 0%, #111827 40%, #1a1a2e 70%, #0f172a 100%);
             overflow: hidden;
         }
+
         .hero::before {
             content: '';
             position: absolute;
-            width: 600px; height: 600px;
+            width: 600px;
+            height: 600px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(200,168,100,0.1) 0%, transparent 70%);
-            top: -200px; right: -100px;
+            background: radial-gradient(circle, rgba(200, 168, 100, 0.1) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
             animation: glow 8s ease-in-out infinite;
         }
+
         .hero::after {
             content: '';
             position: absolute;
-            width: 400px; height: 400px;
+            width: 400px;
+            height: 400px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(100,130,200,0.05) 0%, transparent 70%);
-            bottom: -100px; left: -50px;
+            background: radial-gradient(circle, rgba(100, 130, 200, 0.05) 0%, transparent 70%);
+            bottom: -100px;
+            left: -50px;
             animation: glow 10s ease-in-out infinite reverse;
         }
+
         @keyframes glow {
-            0%,100% { transform: translate(0,0) scale(1); opacity:0.5; }
-            50% { transform: translate(20px,-20px) scale(1.1); opacity:1; }
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: translate(20px, -20px) scale(1.1);
+                opacity: 1;
+            }
         }
-        .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .hero-badge {
             display: inline-block;
             padding: 6px 20px;
-            border: 1px solid rgba(200,168,100,0.3);
+            border: 1px solid rgba(200, 168, 100, 0.3);
             border-radius: 20px;
             font-size: 10px;
             letter-spacing: 3px;
@@ -67,6 +99,7 @@
             color: var(--gold);
             margin-bottom: 24px;
         }
+
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 48px;
@@ -77,6 +110,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .hero h2 {
             font-size: 16px;
             font-weight: 300;
@@ -85,6 +119,7 @@
             text-transform: uppercase;
             margin-bottom: 24px;
         }
+
         .hero-desc {
             font-size: 14px;
             color: var(--text-secondary);
@@ -92,26 +127,47 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
         .gold-line {
-            width: 60px; height: 2px;
+            width: 60px;
+            height: 2px;
             background: linear-gradient(90deg, transparent, var(--gold), transparent);
             margin: 24px auto;
         }
 
         /* ===== SECTIONS ===== */
-        .section { max-width: 1100px; margin: 0 auto; padding: 64px 40px; }
-        .section-header { text-align: center; margin-bottom: 48px; }
-        .section-label {
-            font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
-            color: var(--gold); margin-bottom: 12px;
+        .section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 64px 40px;
         }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-label {
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 32px; font-weight: 600; margin-bottom: 12px;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 12px;
         }
+
         .section-subtitle {
-            font-size: 14px; color: var(--text-secondary);
-            max-width: 600px; margin: 0 auto; line-height: 1.7;
+            font-size: 14px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
         }
 
         /* ===== PRODUCT CATEGORIES ===== */
@@ -120,8 +176,9 @@
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 20px;
         }
+
         .category-card {
-            background: rgba(255,255,255,0.03);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 32px 24px;
@@ -130,42 +187,62 @@
             position: relative;
             overflow: hidden;
         }
+
         .category-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 3px;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
             background: linear-gradient(90deg, transparent, var(--gold), transparent);
             opacity: 0;
             transition: opacity 0.4s ease;
         }
+
         .category-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(200,168,100,0.3);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            border-color: rgba(200, 168, 100, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
         }
-        .category-card:hover::before { opacity: 1; }
+
+        .category-card:hover::before {
+            opacity: 1;
+        }
+
         .cat-icon {
-            width: 64px; height: 64px;
+            width: 64px;
+            height: 64px;
             margin: 0 auto 16px;
             border-radius: 16px;
-            background: rgba(200,168,100,0.08);
-            display: flex; align-items: center; justify-content: center;
+            background: rgba(200, 168, 100, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 28px;
         }
+
         .category-card h3 {
-            font-size: 16px; font-weight: 700;
-            margin-bottom: 8px; color: var(--text-primary);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
         }
+
         .category-card p {
-            font-size: 12px; color: var(--text-secondary); line-height: 1.6;
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
         }
+
         .cat-tag {
             display: inline-block;
             padding: 4px 12px;
             border-radius: 12px;
-            font-size: 9px; letter-spacing: 1px;
+            font-size: 9px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            background: rgba(200,168,100,0.1);
+            background: rgba(200, 168, 100, 0.1);
             color: var(--gold);
             margin-top: 14px;
         }
@@ -176,32 +253,46 @@
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
+
         .features-row {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
         }
+
         .feature-item {
             text-align: center;
             padding: 32px 20px;
             position: relative;
         }
+
         .feature-item::after {
             content: '';
             position: absolute;
-            right: 0; top: 20%; height: 60%;
+            right: 0;
+            top: 20%;
+            height: 60%;
             width: 1px;
             background: linear-gradient(180deg, transparent, var(--border), transparent);
         }
-        .feature-item:last-child::after { display: none; }
+
+        .feature-item:last-child::after {
+            display: none;
+        }
+
         .feature-val {
             font-family: 'Playfair Display', serif;
-            font-size: 36px; font-weight: 700;
-            color: var(--gold); margin-bottom: 6px;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 6px;
         }
+
         .feature-lbl {
-            font-size: 11px; letter-spacing: 1px;
-            text-transform: uppercase; color: var(--text-muted);
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
         }
 
         /* ===== SPEC TABLE ===== */
@@ -209,15 +300,17 @@
             overflow-x: auto;
             border-radius: 16px;
             border: 1px solid var(--border);
-            background: rgba(255,255,255,0.02);
+            background: rgba(255, 255, 255, 0.02);
         }
+
         .spec-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 13px;
         }
+
         .spec-table thead th {
-            background: rgba(200,168,100,0.08);
+            background: rgba(200, 168, 100, 0.08);
             padding: 16px 18px;
             text-align: left;
             font-size: 11px;
@@ -227,24 +320,28 @@
             white-space: nowrap;
             border-bottom: 1px solid var(--border);
         }
+
         .spec-table tbody td {
             padding: 14px 18px;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             color: var(--text-secondary);
             vertical-align: top;
         }
+
         .spec-table tbody tr:hover td {
-            background: rgba(200,168,100,0.03);
+            background: rgba(200, 168, 100, 0.03);
         }
+
         .spec-table .product-name-cell {
             color: var(--text-primary);
             font-weight: 600;
         }
+
         .spec-highlight {
             display: inline-block;
             padding: 2px 8px;
             border-radius: 6px;
-            background: rgba(200,168,100,0.1);
+            background: rgba(200, 168, 100, 0.1);
             color: var(--gold);
             font-size: 11px;
             font-weight: 600;
@@ -256,21 +353,37 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
+
         .app-card {
-            background: rgba(255,255,255,0.03);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
             border-radius: 14px;
             padding: 28px;
             text-align: center;
             transition: all 0.3s ease;
         }
+
         .app-card:hover {
             transform: translateY(-3px);
-            border-color: rgba(200,168,100,0.25);
+            border-color: rgba(200, 168, 100, 0.25);
         }
-        .app-emoji { font-size: 36px; margin-bottom: 14px; }
-        .app-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
-        .app-card p { font-size: 11px; color: var(--text-secondary); line-height: 1.6; }
+
+        .app-emoji {
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+
+        .app-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .app-card p {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
 
         /* ===== CTA ===== */
         .cta-section {
@@ -279,68 +392,108 @@
             background: linear-gradient(135deg, #0a0e17, #111827);
             position: relative;
         }
+
         .cta-section::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 1px;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
             background: linear-gradient(90deg, transparent, var(--gold), transparent);
         }
+
         .contact-card {
             max-width: 480px;
             margin: 0 auto 32px;
-            background: rgba(200,168,100,0.06);
-            border: 1px solid rgba(200,168,100,0.15);
+            background: rgba(200, 168, 100, 0.06);
+            border: 1px solid rgba(200, 168, 100, 0.15);
             border-radius: 20px;
             padding: 36px;
         }
+
         .contact-card .name {
             font-family: 'Playfair Display', serif;
-            font-size: 24px; font-weight: 700;
-            color: var(--gold-light); margin-bottom: 4px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 4px;
         }
+
         .contact-card .title {
-            font-size: 12px; color: var(--text-secondary);
-            letter-spacing: 1px; margin-bottom: 4px;
+            font-size: 12px;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            margin-bottom: 4px;
         }
+
         .contact-card .division {
-            font-size: 11px; color: var(--text-muted); margin-bottom: 20px;
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
         }
+
         .contact-detail {
-            display: flex; justify-content: center; gap: 28px;
-            flex-wrap: wrap; font-size: 12px; color: var(--text-secondary);
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: var(--text-secondary);
         }
-        .contact-detail a { color: var(--gold); text-decoration: none; }
-        .contact-detail a:hover { text-decoration: underline; }
-        .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        .contact-detail a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .contact-detail a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .btn {
             display: inline-block;
             padding: 14px 32px;
             border-radius: 10px;
-            font-size: 12px; font-weight: 700;
-            letter-spacing: 2px; text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             text-decoration: none;
             transition: all 0.3s ease;
         }
+
         .btn-gold {
             background: linear-gradient(135deg, var(--gold), #b8943d);
             color: #0a0a0a;
         }
+
         .btn-outline {
-            border: 1px solid rgba(200,168,100,0.3);
-            color: var(--gold); background: transparent;
+            border: 1px solid rgba(200, 168, 100, 0.3);
+            color: var(--gold);
+            background: transparent;
         }
+
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(200,168,100,0.15);
+            box-shadow: 0 10px 30px rgba(200, 168, 100, 0.15);
         }
 
         /* ===== BACK LINK ===== */
         .back-link {
             position: fixed;
-            top: 20px; left: 20px;
+            top: 20px;
+            left: 20px;
             z-index: 100;
             padding: 8px 16px;
-            background: rgba(10,10,15,0.8);
+            background: rgba(10, 10, 15, 0.8);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -351,8 +504,9 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
         }
+
         .back-link:hover {
-            background: rgba(200,168,100,0.1);
+            background: rgba(200, 168, 100, 0.1);
             transform: translateX(-2px);
         }
 
@@ -365,21 +519,46 @@
             border-top: 1px solid var(--border);
             background: #060608;
         }
-        footer a { color: var(--gold); text-decoration: none; }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
 
         @media (max-width: 860px) {
-            .hero h1 { font-size: 32px; }
-            .category-grid { grid-template-columns: repeat(2, 1fr); }
-            .features-row { grid-template-columns: repeat(2, 1fr); }
-            .app-grid { grid-template-columns: 1fr 1fr; }
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .app-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
+
         @media (max-width: 520px) {
-            .category-grid { grid-template-columns: 1fr; }
-            .features-row { grid-template-columns: 1fr 1fr; }
-            .app-grid { grid-template-columns: 1fr; }
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .app-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <a href="linkedin_brochure.html" class="back-link">← Back to Overview</a>
@@ -392,7 +571,7 @@
             <h2>Complete HTV Product Portfolio</h2>
             <div class="gold-line"></div>
             <p class="hero-desc">
-                Over 50 premium HTV variants engineered for every creative application — from fashion and sportswear 
+                Over 50 premium HTV variants engineered for every creative application — from fashion and sportswear
                 to luxury embellishments and industrial textiles. Backed by 30+ years of DSO's adhesive expertise.
             </p>
         </div>
@@ -425,55 +604,64 @@
         <div class="section-header">
             <div class="section-label">Product Lines</div>
             <div class="section-title">Explore Our HTV Categories</div>
-            <p class="section-subtitle">Each category is engineered with specific adhesive chemistry and surface finishes tailored to its application.</p>
+            <p class="section-subtitle">Each category is engineered with specific adhesive chemistry and surface
+                finishes tailored to its application.</p>
         </div>
         <div class="category-grid">
             <div class="category-card">
                 <div class="cat-icon">🔥</div>
                 <h3>PU Heat Transfer Film</h3>
-                <p>Ultra-thin polyurethane film with excellent elasticity. Soft hand feel, superior wash durability, and vibrant color retention. Ideal for premium sportswear and fashion apparel.</p>
+                <p>Ultra-thin polyurethane film with excellent elasticity. Soft hand feel, superior wash durability, and
+                    vibrant color retention. Ideal for premium sportswear and fashion apparel.</p>
                 <span class="cat-tag">Best Seller</span>
             </div>
             <div class="category-card">
                 <div class="cat-icon">🎨</div>
                 <h3>PVC Heat Transfer Film</h3>
-                <p>Cost-effective vinyl-based film with excellent opacity and sharp edge definition. Wide color range with consistent finish for high-volume production.</p>
+                <p>Cost-effective vinyl-based film with excellent opacity and sharp edge definition. Wide color range
+                    with consistent finish for high-volume production.</p>
                 <span class="cat-tag">High Volume</span>
             </div>
             <div class="category-card">
                 <div class="cat-icon">✨</div>
                 <h3>Glitter & Sparkle HTV</h3>
-                <p>Micro-particle glitter embedded in durable adhesive layers. Available in fine, chunky, and holographic variants for eye-catching decorative effects.</p>
+                <p>Micro-particle glitter embedded in durable adhesive layers. Available in fine, chunky, and
+                    holographic variants for eye-catching decorative effects.</p>
                 <span class="cat-tag">Premium Effect</span>
             </div>
             <div class="category-card">
                 <div class="cat-icon">🧵</div>
                 <h3>Flock Heat Transfer</h3>
-                <p>Velvet-like raised texture with premium tactile finish. Short-pile flock fibers bonded via precision adhesive for luxury branding and lettering.</p>
+                <p>Velvet-like raised texture with premium tactile finish. Short-pile flock fibers bonded via precision
+                    adhesive for luxury branding and lettering.</p>
                 <span class="cat-tag">Luxury</span>
             </div>
             <div class="category-card">
                 <div class="cat-icon">🌈</div>
                 <h3>Chameleon & Two-Tone</h3>
-                <p>Color-shifting films that change hue with viewing angle. Metallic and iridescent options for standout designs and premium limited editions.</p>
+                <p>Color-shifting films that change hue with viewing angle. Metallic and iridescent options for standout
+                    designs and premium limited editions.</p>
                 <span class="cat-tag">Trending</span>
             </div>
             <div class="category-card">
                 <div class="cat-icon">🔦</div>
                 <h3>Reflective HTV</h3>
-                <p>3M-grade retroreflective transfer film for safety and activewear. High visibility in low-light conditions while maintaining design flexibility.</p>
+                <p>3M-grade retroreflective transfer film for safety and activewear. High visibility in low-light
+                    conditions while maintaining design flexibility.</p>
                 <span class="cat-tag">Safety</span>
             </div>
             <div class="category-card">
                 <div class="cat-icon">💎</div>
                 <h3>Metallic & Foil HTV</h3>
-                <p>Mirror-finish metallic films in gold, silver, rose gold, and more. Premium foil effects for luxury fashion labels and high-end retail branding.</p>
+                <p>Mirror-finish metallic films in gold, silver, rose gold, and more. Premium foil effects for luxury
+                    fashion labels and high-end retail branding.</p>
                 <span class="cat-tag">Metallic</span>
             </div>
             <div class="category-card">
                 <div class="cat-icon">🛡️</div>
                 <h3>Printable HTV</h3>
-                <p>Compatible with eco-solvent, latex, and UV printers. Full CMYK process capability for photographic-quality custom transfers and detailed graphics.</p>
+                <p>Compatible with eco-solvent, latex, and UV printers. Full CMYK process capability for
+                    photographic-quality custom transfers and detailed graphics.</p>
                 <span class="cat-tag">Custom Print</span>
             </div>
         </div>
@@ -587,7 +775,8 @@
             <div class="app-card">
                 <div class="app-emoji">👕</div>
                 <h4>Fashion & Sportswear</h4>
-                <p>Custom logos, brand graphics, and performance labels for T-shirts, jerseys, activewear, and streetwear.</p>
+                <p>Custom logos, brand graphics, and performance labels for T-shirts, jerseys, activewear, and
+                    streetwear.</p>
             </div>
             <div class="app-card">
                 <div class="app-emoji">🏈</div>
@@ -626,22 +815,25 @@
             <div class="title">Senior Vice President</div>
             <div class="division">Transfer & Bonding Material Division · Daesang ST</div>
             <div class="contact-detail">
-                <span>📧 <a href="mailto:albert@daesangst.com">albert@daesangst.com</a></span>
+                <span>📧 <a href="mailto:akim@daesangst.com">akim@daesangst.com</a></span>
                 <span>📞 +82-2-2631-4475</span>
                 <span>📍 Seoul, South Korea</span>
             </div>
         </div>
         <div class="btn-row">
-            <a href="https://www.dso-co.com/eng/sub_customer/inquiry.php" class="btn btn-gold" target="_blank">Request Quote</a>
+            <a href="https://www.dso-co.com/eng/sub_customer/inquiry.php" class="btn btn-gold" target="_blank">Request
+                Quote</a>
             <a href="https://www.dso-co.com/eng/main/" class="btn btn-outline" target="_blank">Visit DSO Global</a>
         </div>
     </section>
 
     <footer>
         <p>© 2026 DSO Co., Ltd. All Rights Reserved. · 1182, Cheonho-daero, Gangdong-gu, Seoul, Republic of Korea<br>
-            <a href="https://www.dso-co.com/eng/main/">www.dso-co.com</a> · <a href="http://www.daesangst.com">www.daesangst.com</a>
+            <a href="https://www.dso-co.com/eng/main/">www.dso-co.com</a> · <a
+                href="http://www.daesangst.com">www.daesangst.com</a>
         </p>
     </footer>
 
 </body>
+
 </html>
